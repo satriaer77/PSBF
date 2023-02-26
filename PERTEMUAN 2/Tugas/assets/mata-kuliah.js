@@ -72,5 +72,3 @@ const mataKuliah= {
             }
         }
 };
-
-console.log

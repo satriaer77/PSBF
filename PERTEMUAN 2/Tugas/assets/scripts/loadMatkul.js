@@ -20,7 +20,7 @@ if(matkul == null)
                   <div class="card-subtitle text-gray font-kanit">${dosenObject[matkulObject[matkulObj]["dosen"]]["nama"]}</div>
                 </div>
                 <div class="card-body card-desc font-raleway">${matkulObject[matkulObj]["deskripsi"]}</div>
-                <div class="card-footer font-kanit"><a class="btn btn-primary border-round" href="detail-mata-kuliah.html?menu=matkul&matkul=${matkulObj}">Lihat Mata Kuliah</a></div>
+                <div class="card-footer font-kanit"><a class="btn btn-primary btn-lg border-round" href="detail-mata-kuliah.html?menu=matkul&matkul=${matkulObj}">Lihat Mata Kuliah</a></div>
             </div>
         </div>`;
    
@@ -49,8 +49,4 @@ else
     deskripsiMatkul.innerHTML = matkulObject[matkul]["deskripsi"];
 
 }
-
-
-
-
 
