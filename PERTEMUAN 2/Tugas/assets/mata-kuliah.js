@@ -24,7 +24,7 @@ const mataKuliah= {
         "warren" :
         {
             "nama" : "Warren Owen,S.Kom., M.Kom",
-            "deskripsi" : `Amanda Putri adalah seorang dosen wanita yang memiliki gelar S.kom dan M.kom dari Universitas Teknologi Surabaya (UTS). Lahir pada tanggal 1 Januari 1985.
+            "deskripsi" : `Warren Owen adalah seorang dosen wanita yang memiliki gelar S.kom dan M.kom dari Universitas Teknologi Surabaya (UTS). Lahir pada tanggal 1 Januari 1985.
             Setelah menyelesaikan gelar S.kom-nya, Amanda memutuskan untuk melanjutkan pendidikannya dan memperoleh gelar M.kom dari UTS. Selama studinya di program pascasarjana, Amanda fokus pada pengembangan perangkat lunak dan aplikasi mobile.`,
             "foto" : "warren.png"
         },
