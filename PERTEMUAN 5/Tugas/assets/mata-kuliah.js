@@ -73,4 +73,3 @@ const mataKuliah= {
         }
 };
 
-console.log
