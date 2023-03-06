@@ -1,0 +1,54 @@
+.navigation-active
+{
+    background-color: #5755D9 !important;
+    padding: 0.3rem 0.8rem;
+}
+
+.navigation a
+{
+    color: #F7F8F9 !important;
+}
+.navigation a:hover
+{
+   opacity: 0.7;
+}
+
+.page-container
+{
+    padding:1rem;
+}
+.banner-section
+{
+    margin:5rem 0;
+}
+
+
+.title-section
+{
+    font-family: 'Kanit';
+    font-weight: bold;
+}
+
+.card-content
+{
+    background-color: #3B4351;
+}
+.card-container
+{
+    padding:2rem;
+}
+
+.border-round
+{
+    border-radius: 1.5rem !important;
+}
+.card-desc
+{
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+}
+

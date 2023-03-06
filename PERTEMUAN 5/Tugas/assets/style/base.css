@@ -1,0 +1,100 @@
+*
+{
+    margin: 0;
+    padding:0;
+}
+
+
+/* primary #5755D9
+secondary #3B4351
+Accent #F7F8F9 */
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: #5755D9;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #3B4351;
+    border-radius: 1rem;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(87, 85, 217, 0.500);
+  }
+
+.font-kanit
+{
+  font-family: 'kanit';
+}
+.font-raleway
+{
+  font-family: 'raleway';
+}
+
+/* BACKGROUND COLOR */
+.background-primary
+{
+    background-color: #5755D9 !important;
+}
+
+.text-primary
+{
+    color: #5755D9 !important;
+}
+
+
+
+.background-secondary
+{
+    background-color: #3B4351 !important;
+}
+
+.text-secondary
+{
+    color: #3B4351 !important;
+}
+
+
+.background-accent
+{
+    background-color: #F7F8F9 !important;
+}
+
+.text-accent
+{
+    color: #F7F8F9 !important;
+}
+
+.text-linethrough
+{
+    text-decoration: line-through;
+}
+
+.mb-1
+{
+  margin-bottom: 1rem !important;
+}
+.mb-5
+{
+  margin-bottom: 5rem !important;
+}
+.mt-1
+{
+  margin-top: 1rem !important;
+}
+.mt-2
+{
+  margin-top: 2rem !important;
+}
+.mt-5
+{
+  margin-top: 5rem !important;
+}
+
