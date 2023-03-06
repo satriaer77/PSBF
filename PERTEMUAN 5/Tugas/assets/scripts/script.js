@@ -19,7 +19,6 @@ for (pathName of pathArray) {
 function parseURLParams() {
     const queryString = window.location.search;
     const urlParams   = new URLSearchParams(queryString);
-
     return urlParams;
 }
 
@@ -30,66 +29,25 @@ function loadHTML(file, section) {
 
     const menuHalaman = parseURLParams().get("menu");
 
-    //============ AJAX with xhr ============//
-    const xhr = new XMLHttpRequest();
-
-    xhr.onload = function () {
-        if (this.status == 200) {
-            section.innerHTML = xhr.responseText;
-            addClass("#" + menuHalaman, "navigation-active");
-            addClass("#" + menuHalaman, "text-bold");
-            addClass("#" + menuHalaman, "border-round");
-        }
-        else {
-            console.warn("Failure status code not 200");
-        }
-    }
-    xhr.open('get', file, true);
-    xhr.send();
+    $.ajax({
+        type: "GET",
+        url: file
+      }).done(function(responseTxt) {
+        $(section).html(responseTxt);
+        $("#" + menuHalaman).addClass("navigation-active");
+        $("#" + menuHalaman).addClass("text-bold");
+        $("#" + menuHalaman).addClass("border-round");
+       
+      });
 
 }
 
-const navbarSection = document.getElementById("navbar");
-loadHTML(url + 'templates/navbar.html', navbarSection);
+loadHTML(url + 'templates/navbar.html', "#navbar");
 console.log(base_url);
 
 ///=========================== End Load another file HTML ===========================/// 
 
 
-
-
-
-
-
-// ============= Add & Remove Class ambil dari variabel dari setiap elemen pada object queryselectorAll =============//
-function removeClass(selector, propertyVal) {
-    const selectorObject = document.querySelectorAll(selector);
-    const typeVar = typeof (selectorObject);
-    const objSize = Object.keys(selectorObject).length;
-    console.log(selectorObject);
-    if (typeVar != "object" || objSize < 1) {
-        selectorObject.classList.remove(propertyVal);
-    }
-    else {
-        selectorObject.forEach(function (item) {
-            item.classList.remove(propertyVal);
-        });
-    }
-
-}
-
-function addClass(selector, propertyVal) {
-    const selectorObject = document.querySelectorAll(selector);
-    const typeVar        = typeof (selectorObject);
-    const objSize        = Object.keys(selectorObject).length;
-
-    if (typeVar != "object" || objSize < 1) {
-        selectorObject.classList.add(propertyVal);
-    }
-    else {
-        selectorObject.forEach(function (item) {
-            item.classList.add(propertyVal);
-        });
-    }
-}
-// ============= End Add & Remove Class ambil dari variabel dari setiap elemen pada object queryselectorAll =============//
+$("#click-abt").click(function(){
+  $("#desc-abt").toggleClass("hide");
+});

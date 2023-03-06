@@ -98,3 +98,7 @@ Accent #F7F8F9 */
   margin-top: 5rem !important;
 }
 
+.hide
+{
+  display: none;
+}

@@ -5,7 +5,6 @@ const matkulObject = mataKuliah["daftar"];
 
 if(matkul == null) 
 {
-    const daftarMatkul = document.getElementById("daftar-matkul");
     let getMatkul = ""; 
 
     for (matkulObj in matkulObject)
@@ -25,28 +24,19 @@ if(matkul == null)
         </div>`;
    
     }
-    console.log(getMatkul);
-    daftarMatkul.innerHTML = getMatkul;
+    $("#daftar-matkul").html(getMatkul);
 }
 else
 {
     // LOAD DETAIL MATKUL//
-    const kodeMatkul       = document.getElementById("kode-matkul");
-    const judulMatkul      = document.getElementById("judul-matkul");
-    const coverMatkul      = document.getElementById("cover-matkul");
-    const profilDosen      = document.getElementById("profil-dosen");
-    const namaDosen        = document.getElementById("nama-dosen");
-    const deskripsiDosen   = document.getElementById("deskripsi-dosen");
-    const deskripsiMatkul  = document.getElementById("deskripsi-matkul");
-
-    kodeMatkul.href           = url+"detail-mata-kuliah.html?menu=matkul&matkul="+matkul;
-    kodeMatkul.innerHTML      = matkulObject[matkul]["nama-matkul"];
-    judulMatkul.innerHTML     = matkulObject[matkul]["nama-matkul"];
-    coverMatkul.src           = base_url+"/assets/images/"+matkulObject[matkul]["cover"];
-    profilDosen.src           = base_url+"/assets/images/"+dosenObject[matkulObject[matkul]["dosen"]]["foto"];
-    namaDosen.innerHTML       = dosenObject[matkulObject[matkul]["dosen"]]["nama"];
-    deskripsiDosen.innerHTML  = dosenObject[matkulObject[matkul]["dosen"]]["deskripsi"];
-    deskripsiMatkul.innerHTML = matkulObject[matkul]["deskripsi"];
+    $("#kode-matkul").html(matkulObject[matkul]["nama-matkul"]);
+    $("#kode-matkul").attr("href",url+"detail-mata-kuliah.html?menu=matkul&matkul="+matkul);
+    $("#judul-matkul").html(matkulObject[matkul]["nama-matkul"]);
+    $("#cover-matkul").attr("src", base_url+"/assets/images/"+matkulObject[matkul]["cover"]);
+    $("#profil-dosen").attr("src",base_url+"/assets/images/"+dosenObject[matkulObject[matkul]["dosen"]]["foto"]);
+    $("#nama-dosen").html(dosenObject[matkulObject[matkul]["dosen"]]["nama"]);
+    $("#deskripsi-dosen").html(dosenObject[matkulObject[matkul]["dosen"]]["deskripsi"]);
+    $("#deskripsi-matkul").html(matkulObject[matkul]["deskripsi"]);
 
 }
 
